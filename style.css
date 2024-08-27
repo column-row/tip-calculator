@@ -1,0 +1,175 @@
+/* Basic page styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: hsl(185, 41%, 84%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#heading {
+  text-align: center;
+  color: hsl(183, 100%, 15%);
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+#heading span {
+  display: block;
+  font-size: 1em;
+  color: hsl(183, 100%, 15%);
+}
+
+/* Main container styling */
+.main-content {
+  display: flex;
+  gap: 50px; /* Adjust as needed */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Make the layout responsive */
+@media (max-width: 768px) {
+  .main-content {
+      flex-direction: column; /* Stack sections in a column */
+      align-items: stretch;
+  }
+
+  .payment-rendering {
+      margin-top: 20px; /* Add some space between sections */
+  }
+}
+
+/* Styling for the billing section */
+.billing-section {
+  flex: 1;
+}
+
+/* Input styling with SVG icon */
+.input-icons {
+  position: relative;
+  margin-bottom: 20px; /* Space between inputs */
+}
+
+.input-icons .icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Prevent the icon from intercepting clicks */
+}
+
+.input-field {
+  width: 100%;
+  padding-left: 40px; /* Space for the icon */
+  height: 40px;
+  border: 1px solid hsl(185, 41%, 84%);
+  border-radius: 5px;
+  text-align: right; /* Align the input text to the right */
+}
+
+/* List item styling */
+.tips {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  list-style-type: none; /* Removes default bullets */
+  padding: 0;
+}
+
+.tips li {
+  background-color: hsl(183, 100%, 15%);
+  padding: 10px;
+  color: white;
+  text-align: center;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tips li:hover {
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+  border-color: hsl(183, 100%, 15%);
+}
+
+.tips li.custom-input {
+  padding: 0;
+}
+
+.tips li.custom-input input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Container styling for payment rendering */
+.payment-rendering {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(183, 100%, 15%);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Styling for the p tags */
+.sty-tips {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: white;
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.sty-tips .amount {
+  font-size: 1.5em;
+  color: hsl(185, 41%, 84%);
+}
+
+.sty-tips span {
+  display: block;
+  font-size: 0.8em;
+}
+
+/* Styling for the Reset button */
+.payment-rendering button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.payment-rendering button:hover {
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(185, 41%, 84%);
+  border: 2px solid hsl(185, 41%, 84%);
+}
+
+/* Attribution styling */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 20px;
+  color: hsl(228, 45%, 44%);
+}
